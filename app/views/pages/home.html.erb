@@ -1,6 +1,15 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
 <%= form_tag("/sms/send", method: "post") do %>
-<!-- add form elements here -->
+<div class="form-group">
+  <label for="message">Message:</label>
+  <%= text_area_tag(:message, "", class: "form-control") %>
+</div>
+<div class="row">
+  <div class="form-group col-lg-2">
+    <label for="user_number">Phone number:</label>
+    <%= telephone_field(:user, :number, class: "form-control") %>
+  </div>
+</div>
+<%= submit_tag("Submit", class: "btn btn-primary") %>
 <% end %>
