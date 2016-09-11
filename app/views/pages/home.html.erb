@@ -1,4 +1,6 @@
-<h1>Pages#home</h1>
+<div class="header clearfix">
+  <h3 class="text-muted">SMS Messenger</h3>
+</div>
 
 <%= form_tag("/sms/send", method: "post") do %>
 <div class="form-group">
@@ -13,3 +15,4 @@
 </div>
 <%= submit_tag("Submit", class: "btn btn-primary") %>
 <% end %>
+
